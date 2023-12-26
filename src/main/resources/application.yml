@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbcDriver
+    url: jdbc:postgresql://mel.db.elephantsql.com:5432/vxddpjox
+    username: vxddpjox
+    password: 6Z0hlQkOdPHbJRp-6hZWPFdUZu0MBofC
