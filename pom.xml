@@ -18,6 +18,7 @@
 		<hsqldatabase.path>src/main/resources/db</hsqldatabase.path>
 		<database.url>jdbc:hsqldb:hsql://localhost:9013/templateDB</database.url>
 		<maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
+		<postgresql.version>42.6.0</postgresql.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,7 +47,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>42.6.0</version>
+			<version>${postgresql.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -102,6 +103,11 @@
 								<argument>templateDB</argument>
 							</arguments>
 						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.postgresql</groupId>
+						<artifactId>postgresql</artifactId>
+						<version>42.6.0</version>
 					</plugin>
 				</plugins>
 			</build>
