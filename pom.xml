@@ -82,6 +82,22 @@
 							</execution>
 						</executions>
 					</plugin>
+					<plugin>
+						<groupId>org.codehouse.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>${exec-maven-plugin.version}</version>
+						<configuration>
+							<mainClass>org.hsqldb.Server</mainClass>
+							<arguments>
+								<argument>-port</argument>
+								<argument>9013</argument>
+								<argument>-database.0</argument>
+								<argument>${hsqldatabase.path}/templateDB</argument>
+								<argument>-dbname.0</argument>
+								<argument>templateDB</argument>
+							</arguments>
+						</configuration>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>
