@@ -8,5 +8,18 @@ spring:
     password: 6Z0hlQkOdPHbJRp-6hZWPFdUZu0MBofC
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
+      naming: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+      type:
+        descriptor:
+          sql: trace
