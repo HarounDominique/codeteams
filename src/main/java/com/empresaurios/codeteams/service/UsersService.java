@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 
 @Service("UsersService")
 @Lazy
@@ -33,21 +35,28 @@ public class UsersService implements IUsersService {
 
     @Override
     public int insertUser(UsersDTO usersDTO) {
-        Users user = IUserMapper.INSTANCE.toEntity(usersDTO);
-        usersDao.saveAndFlush(user);
-        return user.getUser_id();
+       try {
+           Users user = IUserMapper.INSTANCE.toEntity(usersDTO);
+           usersDao.saveAndFlush(user);
+           return 1;
+       }catch (Exception e){
+           return 0;
+       }
     }
 
     @Override
     public int updateUser(UsersDTO usersDTO) {
-        return insertUser(usersDTO);
+            return insertUser(usersDTO);
     }
 
     @Override
     public int deleteUser(UsersDTO usersDTO) {
-        int id = usersDTO.getUser_id();
-        Users user = IUserMapper.INSTANCE.toEntity(usersDTO);
-        usersDao.delete(user);
-        return id;
+        try {
+            Users user = IUserMapper.INSTANCE.toEntity(usersDTO);
+            usersDao.delete(user);
+            return 1;
+        } catch (Exception e){
+            return 0;
+        }
     }
 }
