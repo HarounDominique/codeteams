@@ -8,7 +8,7 @@ public class Teams {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int team_id;
 
     @Column
     private String name;
@@ -17,11 +17,11 @@ public class Teams {
     private int project_id;
 
     public int getId() {
-        return id;
+        return team_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.team_id = id;
     }
 
     public String getName() {
