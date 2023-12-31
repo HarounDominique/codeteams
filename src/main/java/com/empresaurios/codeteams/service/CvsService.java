@@ -45,7 +45,6 @@ public class CvsService implements ICvsService {
     public int deleteCv(CvsDTO cvsDTO) {
         int exitCode = 0;
         try {
-            int id = cvsDTO.getCv_id();
             Cvs cv = ICvsMapper.INSTANCE.toEntity(cvsDTO);
             cvsDao.delete(cv);
             exitCode = 1;
