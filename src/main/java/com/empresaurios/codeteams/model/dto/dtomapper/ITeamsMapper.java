@@ -10,10 +10,7 @@ import java.util.List;
 @Mapper
 public interface ITeamsMapper {
     ITeamsMapper INSTANCE = Mappers.getMapper(ITeamsMapper.class);
-
     TeamsDTO toDTO(Teams team);
-
     List<TeamsDTO> toDTOList(List<Teams> teams);
-
     Teams toEntity(TeamsDTO teamsDTO);
 }

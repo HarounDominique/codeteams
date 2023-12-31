@@ -2,7 +2,7 @@ package com.empresaurios.codeteams.service;
 
 import com.empresaurios.codeteams.api.IProjectsService;
 import com.empresaurios.codeteams.model.Projects;
-import com.empresaurios.codeteams.model.dao.IProjectDao;
+import com.empresaurios.codeteams.model.dao.IProjectsDao;
 import com.empresaurios.codeteams.model.dto.ProjectsDTO;
 import com.empresaurios.codeteams.model.dto.dtomapper.IProjectsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.List;
 public class ProjectsService implements IProjectsService {
 
     @Autowired
-    IProjectDao projectDao;
+    IProjectsDao projectDao;
 
 
     @Override
