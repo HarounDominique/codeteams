@@ -1,12 +1,26 @@
+<<<<<<< HEAD
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+=======
+>>>>>>> f3e9854fc62ed6020127ed4de30d0d8328ba0a81
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
+<<<<<<< HEAD
       "jasmine"
     ]
   },
+=======
+      "jasmine",
+      "node"
+    ]
+  },
+  "files": [
+    "src/test.ts",
+    "src/polyfills.ts"
+  ],
+>>>>>>> f3e9854fc62ed6020127ed4de30d0d8328ba0a81
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
